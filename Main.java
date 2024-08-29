@@ -107,6 +107,7 @@ public class Main {
 
     private static void electronicSale() {
         electronicSales = 0;
+        System.out.println("Electronics Sales :");
         System.out.printf("%-20s %-20s %-20s%n", "Product ID", "Category", "Sales Amount");
         for (int i = 0; i < List.size; i++) {
             Product product = List.retrieve(i);
@@ -125,7 +126,7 @@ public class Main {
             Product product = List.retrieve(i);
             totalSale += product.salesAmount;
         }
-        System.out.println("Total sales of Electronics Items as a percentage of total sale :" + (electronicSales / totalSale) * 100 + "%");
+        System.out.println("Total sales of Electronics Items as a percentage of total sale :" + Math.round((electronicSales / totalSale) * 100 * 100.0) / 100.0 + "%");
         System.out.println("---------------------------------------------------------------------------------------------------------------------------------");
     }
 

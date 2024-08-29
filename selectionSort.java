@@ -10,11 +10,13 @@ public class selectionSort {
 
     private int getMaxIndex(int i) {
         int index = i;
-        for (int j = index; j > 0 ; j--) {
+        for (int j = index; j >= 0 ; j--) {
             if (productList.list[index].salesAmount < productList.list[j].salesAmount){
                 index = j;
             }
         }
         return index;
     }
+
+
 }
